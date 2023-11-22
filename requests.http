@@ -1,0 +1,30 @@
+POST http://localhost:8000/test
+
+{
+    "someContent": true
+}
+
+###
+
+POST http://localhost:8000/foo
+
+{
+    "someContent": 3
+}
+
+
+###
+
+POST http://localhost:8000/bar
+
+{
+    "someContent": 1
+}
+
+###
+
+GET http://localhost:8000/foo
+
+{
+    "someContent": true
+}

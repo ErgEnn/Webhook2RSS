@@ -1,0 +1,2 @@
+# Webhook2RSS
+Small webserver that listens to webhook invokations and logs them to RSS feed. Useful since many applications provide webhook, discord, slack etc. support for various notifications but no RSS feed.

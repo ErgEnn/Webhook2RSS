@@ -18,3 +18,8 @@ Any path can be POST'ed to by Webhooks and same path can be read using GET metho
 
 ### Example use-case
 Running [watchtower](https://github.com/containrrr/watchtower) and specifing `WATCHTOWER_NOTIFICATION_URL` to POST update info to this application and then using RSS feed reader to find out about updates that watchtower made.
+
+
+### Possible future updates
+- Authentication support
+- RSS feed on paths that have no POST messages yet

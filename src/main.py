@@ -66,9 +66,12 @@ class S(BaseHTTPRequestHandler):
             pubDate = etree.SubElement(item, 'pubDate')
             pubDate.text = record['timestamp']
             description = etree.SubElement(item, 'description')
-            pretty_json = json.dumps(json.loads(record['body']), indent=4)
-            highlighted_json = highlight(pretty_json, JsonLexer(), HtmlFormatter(full=True, style='colorful'))
-            description.text = etree.CDATA(highlighted_json)
+            try:
+                pretty_json = json.dumps(json.loads(record['body']), indent=4)
+                highlighted_json = highlight(pretty_json, JsonLexer(), HtmlFormatter(full=True, style='colorful'))
+                description.text = etree.CDATA(highlighted_json)
+            except:
+                description.text = record['body']
 
         return rss
 

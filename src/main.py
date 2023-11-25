@@ -71,7 +71,8 @@ class S(BaseHTTPRequestHandler):
                 highlighted_json = highlight(pretty_json, JsonLexer(), HtmlFormatter(full=True, style='colorful'))
                 description.text = etree.CDATA(highlighted_json)
             except:
-                description.text = record['body']
+                
+                description.text =  etree.CDATA(record['body'].replace('\n', '<br />'))
 
         return rss
 
